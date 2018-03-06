@@ -10,3 +10,4 @@ The aim of the developed function is to test for relationship between regional u
 * The CSV files used can be used in the csv folder
 * The **main** code file can be found in the rcode folder and is named function.R 
 * The rcode folder also contains the datamanipulation file which shows how the data were cleaned in order to be used for the function
+* The shapefile folder contains the shapefiles used for plotting (Source: http://wiki.freemap.sk/HraniceAdministrativnychUzemi , accessed 27.12.2017)
