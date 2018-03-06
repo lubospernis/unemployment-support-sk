@@ -41,7 +41,6 @@ myfunction <- function(inputParty, inputYear, ncrit= "contiguity", queen=FALSE, 
   if(ncrit=="contiguity") {
     neighbours <- poly2nb(Slovakia_data, queen=queen) #create neigbours
     neighbours[9] <- ifelse(neighbours[9]==0, as.integer(6), neighbours[9]) #connect Petrzalka to Bratislava II - justification - urban population similarity
-    pdf("neighbours.pdf")
     plot(Slovakia_data, border = 'lightgrey')
     plot(neighbours, coordinates(Slovakia_data), add=TRUE, col='red')
     dev.off()
