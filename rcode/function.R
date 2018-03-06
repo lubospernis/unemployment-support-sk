@@ -1,5 +1,3 @@
-setwd("~/OneDrive - University College London/Modules/second year/POLS2025/essay/kotleba")
-
 library("sp")
 library("rgdal")
 library("rgeos")
@@ -22,8 +20,8 @@ lmp <- function (modelobject) {
 } #function to get the p-value from lm regression
 
 #read in the prepared files
-dataset <- read.csv("complete_dataset_per2.csv")
-Slovakia <- readOGR(".", "Slovakia")
+dataset <- read.csv('csv/complete_dataset_per2.csv')
+Slovakia <- readOGR("./shapefiles/", "Slovakia")
 
 #bind the data
 Slovakia_data <- merge(Slovakia, dataset, by="Code")
@@ -134,5 +132,5 @@ myfunction <- function(inputParty, inputYear, ncrit= "contiguity", queen=FALSE, 
   }
 }
 
-myfunction("LSNS", 201603)
+myfunction("SaS", 201603)
 

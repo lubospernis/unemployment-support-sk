@@ -6,7 +6,7 @@ library(spdep)
 
 #first read in all the datasets
 #parties with over 1% in national elections coded as either left-right wing and cosmopolitan/liberal
-parties <- read.csv("parties.csv")
+parties <- read.csv("csv/parties.csv")
 #unemployment data for each district from the elections month
 unemployment <- read.csv("unemployment.csv")
 #election results for every party in every district
