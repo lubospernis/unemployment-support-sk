@@ -1,6 +1,6 @@
 # Unemployment and Extremism in Slovakia
 
-Graphical 
+Using maps I was able to unveil interesting trends about unemployment and regional disparities in Slovakia. 
 
 ## Summary of the FUNCTION
 
