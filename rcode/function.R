@@ -93,10 +93,50 @@ myfunction <- function(inputParty, inputYear, ncrit= "contiguity", queen=FALSE, 
   gwr.map <- Slovakia_data 
   gwr.map@data <- cbind(Slovakia_data@data, as.matrix(results)) #bind results onto the dataset
   #create visual maps
-  map2 <- tm_shape(gwr.map) + tm_fill("votes", style= "quantile", title="Votes in %", palette = "Oranges") + tm_borders(alpha=.4)
-  map3 <- tm_shape(gwr.map) + tm_fill("Unemployment_coef", style= "quantile",  title= "Unemployment coefficient") + tm_borders(alpha=.4)
-  map4 <- tm_shape(gwr.map) + tm_fill("localR2", style= "quantile",  palette = "Greens") + tm_borders(alpha=.4)
-  map5 <- tm_shape(gwr.map) + tm_fill("unemployment", style= "quantile", title = "Unemployment in %", palette = "Reds") + tm_borders(alpha=.4)
+  map2 <- tm_shape(gwr.map) + tm_fill("votes", style= "quantile", title="Votes in %", palette = "Oranges") + tm_borders(alpha=.4) + tm_legend(text.size=1,
+                                                                                                                                              title.size=1.2,
+                                                                                                                                              position = c("right","bottom"), 
+                                                                                                                                              bg.color = "white", 
+                                                                                                                                              bg.alpha=0.5, 
+                                                                                                                                              frame="gray50", 
+                                                                                                                                              height=.6, 
+                                                                                                                                              hist.width=.2,
+                                                                                                                                              hist.height=.2, 
+                                                                                                                                              hist.bg.color="gray60", 
+                                                                                                                                              hist.bg.alpha=1)
+  map3 <- tm_shape(gwr.map) + tm_fill("Unemployment_coef", style= "quantile",  title= "Unemployment coefficient") + tm_borders(alpha=.4) + tm_legend(text.size=1,
+                                                                                                                                                     title.size=1.2,
+                                                                                                                                                     position = c("right","bottom"), 
+                                                                                                                                                     bg.color = "white", 
+                                                                                                                                                     bg.alpha=0.5, 
+                                                                                                                                                     frame="gray50", 
+                                                                                                                                                     height=.6, 
+                                                                                                                                                     hist.width=.2,
+                                                                                                                                                     hist.height=.2, 
+                                                                                                                                                     hist.bg.color="gray60", 
+                                                                                                                                                     hist.bg.alpha=1)
+  map4 <- tm_shape(gwr.map) + tm_fill("localR2", style= "quantile",  palette = "Greens") + tm_borders(alpha=.4) + tm_legend(text.size=1,
+                                                                                                                            title.size=1.2,
+                                                                                                                            position = c("right","bottom"), 
+                                                                                                                            bg.color = "white", 
+                                                                                                                            bg.alpha=0.5, 
+                                                                                                                            frame="gray50", 
+                                                                                                                            height=.6, 
+                                                                                                                            hist.width=.2,
+                                                                                                                            hist.height=.2, 
+                                                                                                                            hist.bg.color="gray60", 
+                                                                                                                            hist.bg.alpha=1)
+  map5 <- tm_shape(gwr.map) + tm_fill("unemployment", style= "quantile", title = "Unemployment in %", palette = "Reds") + tm_borders(alpha=.4) + tm_legend(text.size=1,
+                                                                                                                                                           title.size=1.2,
+                                                                                                                                                           position = c("right","bottom"), 
+                                                                                                                                                           bg.color = "white", 
+                                                                                                                                                           bg.alpha=0.5, 
+                                                                                                                                                           frame="gray50", 
+                                                                                                                                                           height=.6, 
+                                                                                                                                                           hist.width=.2,
+                                                                                                                                                           hist.height=.2, 
+                                                                                                                                                           hist.bg.color="gray60", 
+                                                                                                                                                           hist.bg.alpha=1)
   
   #plot data in a Grid
   grid.newpage()
@@ -131,5 +171,5 @@ myfunction <- function(inputParty, inputYear, ncrit= "contiguity", queen=FALSE, 
   }
 }
 
-myfunction("SaS", 201603)
+myfunction("ex", 201603)
 
